@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="imgs/logo.ico" type="image/x-icon">
+  <title>My Weather</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container -container">
+        <img src="imgs/header/logo.png" alt="logo" class="header__logo">
+        <h1 class="header__title">My Weather</h1>
+      </div>
+    </header>
+
+
+    <main class="main">
+
+      <div class="main__weather weather">
+        <div class="weather__container -container">
+          <form class="weather__weather-request-form weather-request-form" method="get">
+            <!-- <label class="weather-request-form__amount-of-days-header" for="amount-of-days">Количество дней:</label> -->
+
+            <input class="weather-request-form__input-search-city" id="search-city" name="search-city" type="text"
+              placeholder="Название населенного пункта, страны или региона" required>
+            <select class="weather-request-form__amount-of-days-values amount-of-days-values"
+              name="amount-of-days-values" form="weather-request-form" id="amount-of-days-values">
+              <option class="amount-of-days-values__value" value="1" selected>1 день</option>
+              <option class="amount-of-days-values__value" value="2">2 дня</option>
+              <option class="amount-of-days-values__value" value="3">3 дня</option>
+              <option class="amount-of-days-values__value" value="4">4 дня</option>
+              <option class="amount-of-days-values__value" value="5">5 дней</option>
+              <option class="amount-of-days-values__value" value="6">6 дней</option>
+              <option class="amount-of-days-values__value" value="7">7 дней</option>
+            </select>
+            <button class="weather-request-form__button" type="submit"></button>
+          </form>
+
+          <div class="weather__weather-data weather-data" hidden>
+            <div class="weather-data__days">
+
+            </div>
+            <table class="weather-data__table weather-table">
+              <tr>
+                <th rowspan="3"></th>
+                <th colspan="2">ночь</th>
+                <th colspan="2">утро</th>
+                <th colspan="2">день</th>
+                <th colspan="2">вечер</th>
+              </tr>
+              <tr>
+                <td>0:00</td>
+                <td>3:00</td>
+                <td>6:00</td>
+                <td>9:00</td>
+                <td>12:00</td>
+                <td>15:00</td>
+                <td>18:00</td>
+                <td>21:00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Температура, °C</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">чувствуется как</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Давление, мм</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Влажность, %</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Ветер, м/сек</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Вероятность дождя, %</th>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th class="weather-table__header-row">Вероятность снега, %</th>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+
+      <form class="myForm" action="" method="get" id="weather-form">
+        <label for="GET-name">Введите название города:</label>
+        <input class="input__sity" id="GET-name" type="text" name="name" placeholder="Название населенного пункта">
+        <label for="amount-of-days">Количество дней:</label>
+        <select name="amount-of-days" form="weather-form" class="myForm__amount-of-days" id="amount-of-days">
+          <option value="1" selected>1 день</option>
+          <option value="2">2 дня</option>
+          <option value="3">3 дня</option>
+          <option value="4">4 дня</option>
+          <option value="5">5 дней</option>
+          <option value="6">6 дней</option>
+          <option value="7">7 дней</option>
+        </select>
+        <input class="input__button" type="submit" value="submit">
+      </form>
+
+      <div class="weather" hidden>
+
+      </div>
+
+      <table class="weather__table" hidden>
+        <tr>
+          <td>&nbsp;</td>
+          <th colspan="2">ночь</th>
+          <th colspan="2">утро</th>
+          <th colspan="2">день</th>
+          <th colspan="2">вечер</th>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>0:00</td>
+          <td>3:00</td>
+          <td>6:00</td>
+          <td>9:00</td>
+          <td>12:00</td>
+          <td>15:00</td>
+          <td>18:00</td>
+          <td>21:00</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Температура, °C</th>
+          <td class="qqq"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>чувствуется как</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Давление, мм</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Влажность, %</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Ветер, м/сек</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Вероятность дождя, %</th>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>Вероятность снега, %</th>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+
+      </table> -->
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__power-by power-by">
+        <div class="power-by__container -container">
+          <p class="power-by__info">Powered by <a class="power-by__link" href="https://www.weatherapi.com/"
+              title="Free Weather API">WeatherAPI.com</a></p>
+          <a class="power-by__link-img" href="https://www.weatherapi.com/" title="Free Weather API"><img
+              class="power-by__img" src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png'
+              alt="Weather data by WeatherAPI.com" border="0"></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

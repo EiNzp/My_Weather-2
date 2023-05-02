@@ -1,0 +1,355 @@
+@import "_null-styles";
+
+@import url(https://fonts.googleapis.com/css?family=Chewy:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:,regular,700,900&display=swap);
+
+body {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #000000;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+
+    background: url(../imgs/children-s-seamless-pattern-with-sun-clouds-on-white-background-in-cartoon-style-cute-texture-for-kids-room-design-wallpaper-textiles-wrapping-paper-apparel-vector-illustration_103291-406.avif);
+    // for slider
+    min-width: 0;
+}
+
+.-container {
+    max-width: calc(1200px + 15px + 15px);
+    margin: 0 auto;
+    padding: 0px 15px 0px 15px;
+}
+
+/*------------------HEADER-------------------*/
+.header {
+    position: fixed;
+    min-width: 100%;
+    background-color: rgb(31, 54, 71);
+    box-shadow: 0px -1px 10px 1px rgb(91 130 161);
+    z-index: 10;
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    &__logo {
+        height: 50px;
+        /* width: 100px; */
+        // background-color: rgb(59 99 151 / 44%);
+    }
+
+    &__title {
+        font-family: "Chewy";
+        font-size: 28px;
+        // color: rgb(86, 153, 240);
+        // color: rgb(156, 214, 224);
+        color: white;
+    }
+
+    &__weather-request-form {
+        margin: 0 0 0 141px;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+.-container {
+}
+
+/*------------------WEATHER-------------------*/
+
+.main {
+    &__weather {
+    }
+}
+.weather {
+    &__container {
+    }
+
+    &__weather-request-form {
+        margin: 140px auto 0;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 10px 0px rgb(91 130 161);
+    }
+
+    &__weather-data {
+    }
+}
+.-container {
+}
+.weather-request-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    background-color: rgb(31, 54, 71);
+
+    &__amount-of-days-header {
+    }
+
+    &__amount-of-days-values {
+    }
+
+    &__input-search-city {
+        font-weight: 700;
+        height: 32px;
+        width: 350px;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid gray;
+        border-right: none;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &__button {
+        border: 1px solid gray;
+        position: relative;
+        width: 52px;
+        height: 32px;
+        background: url(../imgs/weather/search-icon.svg) center/22px no-repeat;
+        background-color: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+            background-color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        &:hover::before,
+        &:focus::before {
+            opacity: 0.5;
+            background-color: rgba(161, 161, 161, 0.8);
+        }
+    }
+}
+.amount-of-days-values {
+    font-weight: 700;
+    height: 32px;
+    border: 1px solid gray;
+    border-right: none;
+    transition: all 0.2s ease-in-out;
+    &:hover,
+    &:focus {
+        background-color: rgba(228, 228, 228, 0.8);
+    }
+    &__value {
+        font-weight: 700;
+    }
+}
+.weather-data {
+    &__days {
+    }
+
+    &__table {
+    }
+}
+.weather-table {
+}
+
+/*------------------WEATHER-------------------*/
+main {
+    margin-top: 70px;
+
+    &__weather {
+    }
+}
+.weather_display-block {
+    display: block;
+    width: 800px;
+    height: 200px;
+    background-color: black;
+}
+
+.weather__location,
+.weather__temp-c {
+    font-size: 32px;
+    color: yellow;
+}
+table {
+    background-color: rgba(156, 214, 224, 0.95);
+    border-radius: 10px;
+    width: 728px;
+}
+td {
+    text-align: center;
+}
+
+// body {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+
+// }
+
+
+// .header {
+//     display: flex;
+//     justify-content: start;
+// }
+
+.header__title {
+}
+
+.header__logo {
+}
+
+.temperatures {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*------------------ weather-data -------------------*/
+
+.weather {
+    &__weather-data {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &_d-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.weather-data {
+    &__days {
+    }
+
+    &__day {
+    }
+
+    &__table {
+        height: 300px;
+        width: 875px;
+    }
+}
+
+.weather-day {
+    color: white;
+    background-color: rgb(31, 54, 71);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    height: 170px;
+    width: 125px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &:first-child {
+        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    &:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &_focus {
+        // box-shadow: inset 0px 4px 15px rgb(59 99 151 / 44%);
+        box-shadow: inset 0px 0px 24px 20px rgb(0 0 0 / 70%);
+    }
+
+    &__date {
+    }
+
+    &__img {
+        // max-width: 64px;
+    }
+
+    &__temperatures {
+    }
+}
+
+.temperatures {
+    &__min {
+    }
+
+    &__max {
+    }
+}
+.weather-table {
+    background-color: rgb(31, 54, 71);
+    color: white;
+    border-collapse: collapse;
+    &__header-row {
+        text-align: right;
+    }
+
+    &__current-time {
+        box-shadow: inset 0px 0px 24px 15px rgb(0 0 0 / 70%);
+    }
+
+}
+
+
+/*------------------FOOTER-------------------*/
+// border-radius: 10px;
+//     box-shadow: inset 0px 0px 24px 20px rgb(0 0 0 / 70%), 0px 0px 6px -1px white;
+// td:nth-child(2){
+//     background-color: black;
+// }
+
+/*------------------FOOTER-------------------*/
+
+.footer {
+    &__power-by {
+    }
+}
+.power-by {
+    background-color: rgb(31, 54, 71);
+    &__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__info {
+        color: white;
+    }
+
+    &__link {
+    }
+    &__link-img {
+        background-color: white;
+        padding: 2px;
+        border-radius: 4px;
+    }
+
+    &__img {
+        // width: 50px;
+        height: 32px;
+    }
+}
+.-conteiner {
+}

@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Chewy:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:,regular,700,900&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #000000;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  background: url(../imgs/children-s-seamless-pattern-with-sun-clouds-on-white-background-in-cartoon-style-cute-texture-for-kids-room-design-wallpaper-textiles-wrapping-paper-apparel-vector-illustration_103291-406.avif);
+  min-width: 0;
+}
+
+.-container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0px 15px 0px 15px;
+}
+
+/*------------------HEADER-------------------*/
+.header {
+  position: fixed;
+  min-width: 100%;
+  background-color: rgb(31, 54, 71);
+  box-shadow: 0px -1px 10px 1px rgb(91, 130, 161);
+  z-index: 10;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+.header__logo {
+  height: 50px;
+  /* width: 100px; */
+}
+.header__title {
+  font-family: "Chewy";
+  font-size: 28px;
+  color: white;
+}
+.header__weather-request-form {
+  margin: 0 0 0 141px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/*------------------WEATHER-------------------*/
+.weather__weather-request-form {
+  margin: 140px auto 0;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgb(91, 130, 161);
+}
+.weather-request-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  background-color: rgb(31, 54, 71);
+}
+.weather-request-form__input-search-city {
+  font-weight: 700;
+  height: 32px;
+  width: 350px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid gray;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.weather-request-form__button {
+  border: 1px solid gray;
+  position: relative;
+  width: 52px;
+  height: 32px;
+  background: url(../imgs/weather/search-icon.svg) center/22px no-repeat;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.weather-request-form__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.weather-request-form__button:hover::before, .weather-request-form__button:focus::before {
+  opacity: 0.5;
+  background-color: rgba(161, 161, 161, 0.8);
+}
+
+.amount-of-days-values {
+  font-weight: 700;
+  height: 32px;
+  border: 1px solid gray;
+  border-right: none;
+  transition: all 0.2s ease-in-out;
+}
+.amount-of-days-values:hover, .amount-of-days-values:focus {
+  background-color: rgba(228, 228, 228, 0.8);
+}
+.amount-of-days-values__value {
+  font-weight: 700;
+}
+
+/*------------------WEATHER-------------------*/
+main {
+  margin-top: 70px;
+}
+.weather_display-block {
+  display: block;
+  width: 800px;
+  height: 200px;
+  background-color: black;
+}
+
+.weather__location,
+.weather__temp-c {
+  font-size: 32px;
+  color: yellow;
+}
+
+table {
+  background-color: rgba(156, 214, 224, 0.95);
+  border-radius: 10px;
+  width: 728px;
+}
+
+td {
+  text-align: center;
+}
+
+.temperatures {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*------------------ weather-data -------------------*/
+.weather__weather-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.weather__weather-data_d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-data__table {
+  height: 300px;
+  width: 875px;
+}
+
+.weather-day {
+  color: white;
+  background-color: rgb(31, 54, 71);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  height: 170px;
+  width: 125px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weather-day:first-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.weather-day:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.weather-day_focus {
+  box-shadow: inset 0px 0px 24px 20px rgba(0, 0, 0, 0.7);
+}
+.weather-table {
+  background-color: rgb(31, 54, 71);
+  color: white;
+  border-collapse: collapse;
+}
+.weather-table__header-row {
+  text-align: right;
+}
+.weather-table__current-time {
+  box-shadow: inset 0px 0px 24px 15px rgba(0, 0, 0, 0.7);
+}
+
+/*------------------FOOTER-------------------*/
+/*------------------FOOTER-------------------*/
+.power-by {
+  background-color: rgb(31, 54, 71);
+}
+.power-by__container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.power-by__info {
+  color: white;
+}
+.power-by__link-img {
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+}
+.power-by__img {
+  height: 32px;
+}
