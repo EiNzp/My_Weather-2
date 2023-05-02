@@ -236,7 +236,7 @@ function createWeatherDay(data, index, placeInsert) {
 
     const providedIconPath = data.forecast.forecastday[index].day.condition.icon;
     const iconName = providedIconPath.slice(providedIconPath.length - 12);
-    const myIconPath = 'Z:\\web-projects\\practical works\\weatherapi\\project\\imgs\\weather\\64x64' + iconName;
+    const myIconPath = '..\\imgs\\weather\\64x64' + iconName;
     weatherDayImg.src = myIconPath;
     weatherDayImg.title = data.forecast.forecastday[index].day.condition.text;
 
@@ -281,7 +281,7 @@ function fillingTables(data, weatherTableRows, stringValueNameArray, indexDay) {
 
                 const iconName = providedIconPath.slice(providedIconPath.length - 8);
 
-                const myIconPath = 'Z:\\web-projects\\practical works\\weatherapi\\project\\imgs\\weather\\64x64' + timesOfDay + iconName;
+                const myIconPath = '..\\imgs\\weather\\64x64' + timesOfDay + iconName;
 
                 const img = document.createElement('img');
                 img.src = myIconPath;
